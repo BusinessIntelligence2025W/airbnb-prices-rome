@@ -10,7 +10,7 @@
 
 \begin{document}
 
-\title{BI2025 Experiment Report - Group 06}
+\title{BI2025 Interim Experiment Report - Group 06}
 %% ---Authors: Dynamically added ---
 
           \author{Nikola Lukic}
@@ -29,7 +29,7 @@
           
 
 \begin{abstract}
-  This report documents the machine learning experiment for Group 06, following the CRISP-DM process model.
+  This report documents the interim results (Phases 1-3) of the machine learning experiment for Group 06, following the CRISP-DM process model.
 \end{abstract}
 
 \ccsdesc[500]{Computing methodologies~Machine learning}
@@ -50,7 +50,7 @@ The primary business objective is to maximize revenue for property owners by set
 
 %% --- 2. Data Understanding ---
 \section{Data Understanding}
-\textbf{Dataset Description:} 
+\textbf{Dataset Description:} Weekdays and Weekends Airbnb listings in Rome with prices and distances.
 
 The following features were identified in the dataset:
 
@@ -61,15 +61,44 @@ The following features were identified in the dataset:
     \toprule
     \textbf{Feature Name} & \textbf{Data Type} & \textbf{Description} \\
     \midrule
-    
+    bedrooms & double> & The number of bedrooms in the listing. \\
+    biz & boolean> & Whether the listing is for business purposes or not. \\
+    cleanliness\_rating & double> & The cleanliness rating of the listing. \\
+    dist & double> & The distance from the city centre. \\
+    guest\_satisfaction\_overall & double> & The overall guest satisfaction rating of the listing. \\
+    host\_is\_superhost & boolean> & Whether the host is a superhost or not. \\
+    is\_weekend & boolean> & Boolean flag indicating if data is from weekend file \\
+    lat & double> & The latitude of the listing. \\
+    lng & double> & The longitude of the listing. \\
+    metro\_dist & double> & The distance from the nearest metro station. \\
+    multi & boolean> & Whether the listing is for multiple rooms or not. \\
+    person\_capacity & double> & The maximum number of people that can stay in the room. \\
+    realSum & double> & The total price of the Airbnb listing. \\
+    room\_private & boolean> & Whether the room is private or not. \\
+    room\_shared & boolean> & Whether the room is shared or not. \\
+    room\_type & string> & The type of room being offered (e.g. private, shared, etc.). \\
     \bottomrule
   \end{tabular}
 \end{table}
 
 %% --- 3. Data Preparation ---
 \section{Data Preparation}
-\subsection{Data Cleaning}
-Describe your Data preparation steps here and include respective graph data.
+\subsection{Data Cleaning and Transformation}
+The following data preparation steps were performed (extracted from Provenance Graph):
 
+\begin{itemize}
+    \item \textbf{Transform Features} Applied data transformations:\newline 1. Log-Transformation: Applied log-plus-one transformation to realSum to address the high skewness identified in data understanding.\newline 2. Feature Selection: Excluded attr\_index and rest\_index variants due to lack of documentation and high correlation with distance.\newline 3. Encoding: Applied One-Hot Encoding to room\_type.\newline 4. Scaling: Applied Standard Scaler to numeric features to normalize magnitudes.
+    \item \textbf{3.b Analyze Pre-processing Alternatives} 
+    \item \textbf{3.c Analyze Derived Attributes} 
+    \item \textbf{3.d Analyze External Data Sources} 
+    \item \textbf{Transform Features} Applied data transformations:\newline 1. Log-Transformation: Applied log-plus-one transformation to realSum to address the high skewness identified in data understanding.\newline 2. Feature Selection: Excluded attr\_index and rest\_index variants due to lack of documentation and high correlation with distance.\newline 3. Encoding: Applied One-Hot Encoding to room\_type.\newline 4. Scaling: Applied Standard Scaler to numeric features to normalize magnitudes.
+    \item \textbf{3.b Analyze Pre-processing Alternatives} 
+    \item \textbf{3.c Analyze Derived Attributes} 
+    \item \textbf{3.d Analyze External Data Sources} 
+\end{itemize}
+
+%% --- Future Work ---
+\section{Future Work}
+\textit{Modeling, Evaluation, and Deployment will be covered in the final submission.}
 
 \end{document}
