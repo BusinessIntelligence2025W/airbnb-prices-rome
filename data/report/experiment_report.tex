@@ -84,9 +84,13 @@ The following features were identified in the dataset:
 %% --- 3. Data Preparation ---
 \section{Data Preparation}
 \subsection{Data Cleaning and Transformation}
-The following data preparation steps were performed (extracted from Provenance Graph):
+The following data preparation steps were performed:
 
 \begin{itemize}
+    \item \textbf{Transform Features} Applied data transformations:\newline 1. Log-Transformation: Applied log-plus-one transformation to realSum to address the high skewness identified in data understanding.\newline 2. Feature Selection: Excluded attr\_index and rest\_index variants due to lack of documentation and high correlation with distance.\newline 3. Encoding: Applied One-Hot Encoding to room\_type.\newline 4. Scaling: Applied Standard Scaler to numeric features to normalize magnitudes.
+    \item \textbf{3.b Analyze Pre-processing Alternatives} 
+    \item \textbf{3.c Analyze Derived Attributes} 
+    \item \textbf{3.d Analyze External Data Sources} 
     \item \textbf{Transform Features} Applied data transformations:\newline 1. Log-Transformation: Applied log-plus-one transformation to realSum to address the high skewness identified in data understanding.\newline 2. Feature Selection: Excluded attr\_index and rest\_index variants due to lack of documentation and high correlation with distance.\newline 3. Encoding: Applied One-Hot Encoding to room\_type.\newline 4. Scaling: Applied Standard Scaler to numeric features to normalize magnitudes.
     \item \textbf{3.b Analyze Pre-processing Alternatives} 
     \item \textbf{3.c Analyze Derived Attributes} 
