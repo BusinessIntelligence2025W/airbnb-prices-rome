@@ -10,7 +10,7 @@ Airbnb listings from European cities (Rome weekdays/weekends) from Kaggle.
 
 ## Task
 
-Regression task: Predict Airbnb listing prices using XGBoost, following the CRISP-DM process with provenance documentation.
+Regression task: Predict Airbnb listing prices using GradientBoostingRegressor, following the CRISP-DM process with provenance documentation.
 
 ## Setup
 
