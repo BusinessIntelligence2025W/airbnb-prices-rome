@@ -8,3 +8,6 @@ plotly
 requests
 scikit-learn
 nbformat
+numpy
+pandas
+scipy
